@@ -187,7 +187,7 @@ import '@fortawesome/fontawesome-free/css/all.css'; // Import FontAwesome CSS
       },
       handleDrop2(event) {
         event.preventDefault();
-        const elementType = event.dataTransfer.getData("text/html");
+        // const elementType = event.dataTransfer.getData("text/html");
         const slide = event.target.closest(".span");
         console.log(slide);
         if (slide) {
@@ -222,7 +222,7 @@ import '@fortawesome/fontawesome-free/css/all.css'; // Import FontAwesome CSS
         }
       },
 
-      handleDragStart(event, element) {
+      handleDragStart(event) {
         console.log(event.target.dataset.elementType);
         event.dataTransfer.setData("text/plain", event.target.dataset.elementType);
       },
@@ -240,7 +240,7 @@ import '@fortawesome/fontawesome-free/css/all.css'; // Import FontAwesome CSS
         // Find the slide where the element is dropped
         const slide = event.target.closest(".slide");
         if (slide) {
-          const newElement = this.createFormElement(elementType, slide, `form-element`);
+           this.createFormElement(elementType, slide, `form-element`);
         }
       },
       selectitem(event) {
@@ -352,7 +352,7 @@ import '@fortawesome/fontawesome-free/css/all.css'; // Import FontAwesome CSS
         this.dropslide = sliderBox.outerHTML;
       },
 
-      createFormElement(elementType, canvas, referenceId) {
+      createFormElement(elementType, canvas) {
         const element = canvas;
         element.classList.add("form-element");
         const randomClass = this.generateRandomClassName();
@@ -361,63 +361,63 @@ import '@fortawesome/fontawesome-free/css/all.css'; // Import FontAwesome CSS
 
         switch (elementType) {
           case "h1": {
-            var newDiv = document.createElement("h1");
-            newDiv.style.cssText += `position:absolute;top:0%;outline-offset: 6px;outline: gray dashed 0.5px;`;
-            newDiv.textContent = "Dropped element: ";
-            newDiv.setAttribute("contenteditable", "true");
-            newDiv.classList.add(`${this.generateRandomClassName()}`);
-            this.makeDraggable(newDiv);
-            element.appendChild(newDiv);
+            var h1 = document.createElement("h1");
+            h1.style.cssText += `position:absolute;top:0%;outline-offset: 6px;outline: gray dashed 0.5px;`;
+            h1.textContent = "Dropped element: ";
+            h1.setAttribute("contenteditable", "true");
+            h1.classList.add(`${this.generateRandomClassName()}`);
+            this.makeDraggable(h1);
+            element.appendChild(h1);
             break;
           }
           case "h2": {
-            var newDiv = document.createElement("h2");
-            newDiv.style.cssText += `position:absolute;top:0%;outline-offset: 6px;outline: gray dashed 0.5px;`;
-            newDiv.textContent = "Dropped element: ";
-            newDiv.setAttribute("contenteditable", "true");
-            newDiv.classList.add(`${this.generateRandomClassName()}`);
-            this.makeDraggable(newDiv);
-            element.appendChild(newDiv);
+            var h2 = document.createElement("h2");
+            h2.style.cssText += `position:absolute;top:0%;outline-offset: 6px;outline: gray dashed 0.5px;`;
+            h2.textContent = "Dropped element: ";
+            h2.setAttribute("contenteditable", "true");
+            h2.classList.add(`${this.generateRandomClassName()}`);
+            this.makeDraggable(h2);
+            element.appendChild(h2);
             break;
           }
           case "h3": {
-            var newDiv = document.createElement("h3");
-            newDiv.style.cssText += `position:absolute;top:0%;outline-offset: 6px;outline: gray dashed 0.5px;`;
-            newDiv.textContent = "Dropped element: ";
-            newDiv.setAttribute("contenteditable", "true");
-            newDiv.classList.add(`${this.generateRandomClassName()}`);
-            this.makeDraggable(newDiv);
-            element.appendChild(newDiv);
+            var h3 = document.createElement("h3");
+            h3.style.cssText += `position:absolute;top:0%;outline-offset: 6px;outline: gray dashed 0.5px;`;
+            h3.textContent = "Dropped element: ";
+            h3.setAttribute("contenteditable", "true");
+            h3.classList.add(`${this.generateRandomClassName()}`);
+            this.makeDraggable(h3);
+            element.appendChild(h3);
             break;
           }
           case "h4": {
-            var newDiv = document.createElement("h4");
-            newDiv.style.cssText += `position:absolute;top:0%;outline-offset: 6px;outline: gray dashed 0.5px;`;
-            newDiv.textContent = "Dropped element: ";
-            newDiv.setAttribute("contenteditable", "true");
-            newDiv.classList.add(`${this.generateRandomClassName()}`);
-            this.makeDraggable(newDiv);
-            element.appendChild(newDiv);
+            var h4 = document.createElement("h4");
+            h4.style.cssText += `position:absolute;top:0%;outline-offset: 6px;outline: gray dashed 0.5px;`;
+            h4.textContent = "Dropped element: ";
+            h4.setAttribute("contenteditable", "true");
+            h4.classList.add(`${this.generateRandomClassName()}`);
+            this.makeDraggable(h4);
+            element.appendChild(h4);
             break;
           }
           case "h5": {
-            var newDiv = document.createElement("h5");
-            newDiv.style.cssText += `position:absolute;top:0%;outline-offset: 6px;outline: gray dashed 0.5px;`;
-            newDiv.textContent = "Dropped element: ";
-            newDiv.setAttribute("contenteditable", "true");
-            newDiv.classList.add(`${this.generateRandomClassName()}`);
-            this.makeDraggable(newDiv);
-            element.appendChild(newDiv);
+            var h5 = document.createElement("h5");
+            h5.style.cssText += `position:absolute;top:0%;outline-offset: 6px;outline: gray dashed 0.5px;`;
+            h5.textContent = "Dropped element: ";
+            h5.setAttribute("contenteditable", "true");
+            h5.classList.add(`${this.generateRandomClassName()}`);
+            this.makeDraggable(h5);
+            element.appendChild(h5);
             break;
           }
           case "h6": {
-            var newDiv = document.createElement("h6");
-            newDiv.style.cssText += `position:absolute;top:0%;outline-offset: 6px;outline: gray dashed 0.5px;`;
-            newDiv.textContent = "Dropped element: ";
-            newDiv.setAttribute("contenteditable", "true");
-            newDiv.classList.add(`${this.generateRandomClassName()}`);
-            this.makeDraggable(newDiv);
-            element.appendChild(newDiv);
+            var h6 = document.createElement("h6");
+            h6.style.cssText += `position:absolute;top:0%;outline-offset: 6px;outline: gray dashed 0.5px;`;
+            h6.textContent = "Dropped element: ";
+            h6.setAttribute("contenteditable", "true");
+            h6.classList.add(`${this.generateRandomClassName()}`);
+            this.makeDraggable(h6);
+            element.appendChild(h6);
             break;
           }
           case "div": {
