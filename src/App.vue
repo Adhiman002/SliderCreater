@@ -164,14 +164,14 @@ import '@fortawesome/fontawesome-free/css/all.css'; // Import FontAwesome CSS
         dropslideBox: 2345,
       };
     },
-    computed: {
-      getImageUrl() {
-        return (iconName) => {
-          if (!iconName) return "";
-          return require("@/assets/slideImage/" + iconName);
-        };
-      },
-    },
+    // computed: {
+    //   getImageUrl() {
+    //     return (iconName) => {
+    //       if (!iconName) return "";
+    //       return require("@/assets/slideImage/" + iconName);
+    //     };
+    //   },
+    // },
 
     methods: {
       random() {
