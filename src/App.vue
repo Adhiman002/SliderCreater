@@ -487,7 +487,11 @@ import '@fortawesome/fontawesome-free/css/all.css'; // Import FontAwesome CSS
   };
 </script>
 
-<style scoped>
+<style >
+body{
+margin: 0;
+padding: 0;
+}
 .codebutton{
   position: absolute;
     top: 0;
